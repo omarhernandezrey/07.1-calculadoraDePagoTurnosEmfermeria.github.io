@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:196 vh;
+}
+
+h1 {
+    color: #ff7f50;
+}
+
+.container {
+    max-width: 853px;
+    margin: 0 auto;
+    padding: 23px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center; /* Añadir esta línea para centrar el botón */
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #b45a1a;
+    border-radius: 5px;
+}
+
+button {
+    display: inline-block;
+    width: 28%;
+    background-color: #ff7f50;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #fa5a35;
+}
+
+#resultados {
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #98fb98;
+    border-radius: 5px;
+}
+
+.right-image {
+    max-width: 464px;
+    margin: 10px;
+    align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
