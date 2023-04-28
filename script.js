@@ -27,3 +27,14 @@ function calcularPago() {
     
     resultadosDiv.innerHTML = `Total a pagar turnos del mes: $${totalPagar.toLocaleString()} Pesos`;
 }
+
+function toggleFooter() {
+    const footer = document.querySelector("footer");
+    const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollPos > 50) {
+        footer.classList.add("show");
+    } else {
+        footer.classList.remove("show");
+    }
+}

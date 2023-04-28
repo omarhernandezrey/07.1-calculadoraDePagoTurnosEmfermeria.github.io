@@ -4,14 +4,15 @@ body {
     color: #333;
     line-height: 1.6;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    padding-top: 20px;
 }
 
 h1 {
     color: #ff7f50;
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
 .container {
@@ -22,7 +23,7 @@ h1 {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
 .form-container {
@@ -31,7 +32,7 @@ h1 {
     align-items: center;
     max-width: 500px;
     margin: 0 auto;
-    text-align: center; /* Añadir esta línea para centrar el botón */
+    text-align: center;
 }
 
 label {
@@ -50,7 +51,7 @@ input {
 
 button {
     display: inline-block;
-    width: 28%;
+    width: 100%;
     background-color: #ff7f50;
     color: #fff;
     font-size: 18px;
@@ -74,12 +75,11 @@ button:hover {
 }
 
 .right-image {
-    max-width: 464px;
+    max-width: 100%;
     margin: 10px;
     align-self: center;
 }
 
-/* Cambios para adaptarse a dispositivos móviles */
 @media screen and (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -92,4 +92,38 @@ button:hover {
     button {
         width: 100%;
     }
+}
+
+footer {
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+    color: #ffffff;
+    background-color: #ff7f50;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: bottom 0.4s;
+}
+
+footer.show {
+    bottom: 0;
+}
+
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
 }
