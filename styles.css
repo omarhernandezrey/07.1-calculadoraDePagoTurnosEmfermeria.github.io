@@ -1,129 +1,150 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #333;
-    line-height: 1.6;
     margin: 0;
-    padding-top: 20px;
+    padding: 0;
+    background-color: #ffffff;
 }
 
 h1 {
-    color: #ff7f50;
-    font-size: 2.5rem;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    background: linear-gradient(90deg, #008080, #4CAF50);
+    color: white;
+    margin: 0;
+    padding: 15px 30px;
+    font-size: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.container {
-    max-width: 853px;
-    margin: 0 auto;
-    padding: 23px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
+form {
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 333px;
+    width: 50%; /* Asignar el 50% del espacio disponible al formulario */
+}
+
+form label {
+    display: inline-block;
+    width: 180px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+form input {
+    width: 60px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
 }
 
 .form-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
+    justify-content: center;
+    align-items: center; /* Cambiar a "center" para alinear verticalmente los elementos */
+    flex-wrap: nowrap;
+    margin-bottom: 50px;
 }
 
-label {
-    display: block;
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #b45a1a;
-    border-radius: 5px;
+.image-container {
+    order: -1; /* Para que la imagen aparezca en la parte superior del formulario en dispositivos móviles */
 }
 
 button {
-    display: inline-block;
-    width: 100%;
-    background-color: #ff7f50;
-    color: #fff;
-    font-size: 18px;
-    padding: 10px;
+    background: linear-gradient(90deg, #008080, #4CAF50);
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
     border: none;
-    border-radius: 30px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-    background-color: #fa5a35;
+    background: linear-gradient(90deg, #4CAF50, #802d00);
 }
 
 #resultados {
+    padding: 20px;
     font-size: 18px;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #98fb98;
-    border-radius: 5px;
+    font-weight: bold;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(37, 144, 73, 0.1);
+    border-radius: 8px;
+    max-width: 450px;
+    margin: 30px auto;
 }
 
-.right-image {
-    max-width: 100%;
-    margin: 10px;
-    align-self: center;
-}
-
-@media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    
-    .form-container {
-        width: 90%;
-    }
-
-    button {
-        width: 100%;
-    }
+#calendar {
+    max-width: 1512px;
+    margin: 50px auto;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 footer {
+    background: linear-gradient(90deg, #008080, #4CAF50);
+    color: #fff;
+    padding: 20px;
     font-size: 14px;
     text-align: center;
-    padding: 5px;
-    color: #ffffff;
-    background-color: #ff7f50;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    bottom: -50px;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-    transition: bottom 0.4s;
+    margin-top: 50px;
+    border-top: 5px solid #3F51B5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-footer.show {
-    bottom: 0;
+footer p {
+    margin: 0;
+    padding: 0;
 }
 
 .footer-link {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
-    margin: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
 }
 
 .footer-link:hover {
-    text-decoration: underline;
+    border-bottom: 2px solid #fff;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 767px) {
+    form {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    form label {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    form input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #resultados {
+        margin: 20px;
+    }
+
+    .form-container {
+        flex-direction: column; /* Cambiar a "column" para apilar los elementos verticalmente en dispositivos móviles */
+        align-items: center;
+    }
+
+    .image-container {
+        order: -1; /* Para que la imagen aparezca en la parte superior del formulario en dispositivos móviles */
+    }
 }

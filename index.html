@@ -1,49 +1,63 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turnos Enfermería</title>
+    <title>Turnos y Calendario</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/locale/es.js"></script>
+    <script src="script.js"></script>
 </head>
-<body onscroll="toggleFooter()">
-    <div class="container">
-        <div class="form-container">
-            <form id="turnos-form">
-                <h1>Calculadora de turnos de Enfermería</h1>
-                <label for="totalDiasMes">Ingrese el total de días del mes:</label>
-                <input type="number" id="totalDiasMes" name="totalDiasMes" required><br><br>
-                
-                <label for="turnosDia">Ingrese el total de turnos que hizo de lunes a sábado de DIA:</label>
-                <input type="number" id="turnosDia" name="turnosDia" required><br><br>
-                
-                <label for="turnosNoche">Ingresé el total de turnos que hizo de lunes a sábado de NOCHE:</label>
-                <input type="number" id="turnosNoche" name="turnosNoche" required><br><br>
-                
-                <label for="turnosDomingoDia">Ingrese los turnos que hizo los domingos de DIA:</label>
-                <input type="number" id="turnosDomingoDia" name="turnosDomingoDia" required><br><br>
-                
-                <label for="turnosDomingoNoche">Ingrese los turnos que hizo los domingos de NOCHE:</label>
-                <input type="number" id="turnosDomingoNoche" name="turnosDomingoNoche" required><br><br>
-                
-                <label for="turnosFestivosDia">Ingrese los turnos que hizo los días festivos de DIA:</label>
-                <input type="number" id="turnosFestivosDia" name="turnosFestivosDia" required><br><br>
-                
-                <label for="turnosFestivosNoche">Ingrese los turnos que hizo los días festivos de NOCHE:</label>
-                <input type="number" id="turnosFestivosNoche" name="turnosFestivosNoche" required><br><br>
-                
-                <button type="button" onclick="calcularPago()">Calcular</button>
-            </form>
-            <div id="resultados"></div>
+<body>
+    <h1>Calculadora de para pago turnos de enfermería</h1>
+    <div class="form-container">
+        <form>
+            <label for="totalDiasMes">Total días del mes:</label>
+            <input type="number" id="totalDiasMes" value="30">
+            <br>
+
+            <label for="turnosDia">Turnos de día:</label>
+            <input type="number" id="turnosDia" value="0">
+            <br>
+
+            <label for="turnosNoche">Turnos de noche:</label>
+            <input type="number" id="turnosNoche" value="0">
+            <br>
+
+            <label for="turnosDomingoDia">Turnos domingo día:</label>
+            <input type="number" id="turnosDomingoDia" value="0">
+            <br>
+
+            <label for="turnosDomingoNoche">Turnos domingo noche:</label>
+            <input type="number" id="turnosDomingoNoche" value="0">
+            <br>
+
+            <label for="turnosFestivosDia">Turnos festivos día:</label>
+            <input type="number" id="turnosFestivosDia" value="0">
+            <br>
+
+            <label for="turnosFestivosNoche">Turnos festivos noche:</label>
+            <input type="number" id="turnosFestivosNoche" value="0">
+            <br>
+
+            <button type="button" onclick="calcularPago()">Calcular</button>
+        </form>
+        <div class="image-container">
+            <img src="imagenes/Engermera1.jpg" alt="Descripción de la imagen">
         </div>
-        <img src="./imagenes/Engermera1.jpg" alt="Imagen Derecha" class="right-image">
     </div>
+    
+    <div id="resultados"></div>
+
+    <div id="calendar"></div>
+
     <footer>
-        <div class="footer-text">Autor de la app: Omar Hernandez Rey</div>
-        <div class="footer-text">Derechos reservados © 2023</div>
-        <div class="footer-text">Versión 1.0.0</div>
+        <p>&copy; 2023 Omar Hernandez Rey - Desarrollador de software. Todos los derechos reservados.</p>
         <a class="footer-link" href="https://www.linkedin.com/feed/?trk=404_page" target="_blank">Conéctate conmigo en LinkedIn</a>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
