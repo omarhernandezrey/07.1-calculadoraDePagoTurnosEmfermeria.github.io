@@ -92,12 +92,12 @@ function generarCalendario() {
             color: ''
         };
 
-        if (i % 2 === 0) { // Día par
-            turnoDia.title = 'Turno Día - Roxana';
-            turnoNoche.title = 'Turno Noche - Roxana';
-        } else { // Día impar
-            turnoDia.title = 'Turno Día - Arlendys';
+        if (i % 2 === 0) { // Día impar
+            turnoDia.title = 'Turno Noche - Arlendys';
             turnoNoche.title = 'Turno Noche - Arlendys';
+        } else { // Día Par
+            turnoDia.title = 'Turno Día - Roxana';
+            turnoNoche.title = 'Turno Día - Roxana';
         }
 
         if (currentDay.day() === 0 || esFestivo(currentDay)) { // Es domingo o festivo
