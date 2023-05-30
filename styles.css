@@ -3,15 +3,20 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
     background: linear-gradient(90deg, #008080, #4CAF50);
     color: white;
     margin: 0;
-    padding: 25px 488px;
+    padding: 25px 0;
     font-size: 24px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
 }
 
 form {
@@ -19,8 +24,7 @@ form {
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    max-width: 333px;
-    width: 50%; /* Asignar el 50% del espacio disponible al formulario */
+    width: 100%;
 }
 
 form label {
@@ -41,13 +45,13 @@ form input {
 .form-container {
     display: flex;
     justify-content: center;
-    align-items: center; /* Cambiar a "center" para alinear verticalmente los elementos */
+    align-items: center;
     flex-wrap: nowrap;
     margin-bottom: 50px;
 }
 
 .image-container {
-    order: -1; /* Para que la imagen aparezca en la parte superior del formulario en dispositivos móviles */
+    order: -1;
 }
 
 button {
@@ -73,18 +77,18 @@ button:hover {
     background-color: #ffffff;
     box-shadow: 0 2px 4px #4caf50;
     border-radius: 8px;
-    max-width: 450px;
+    max-width: 800px; /* Cambiado para hacer los resultados más grandes */
     margin: 30px auto;
     color: orangered;
+    text-align: center; /* Asegúrate de que los resultados estén centrados */
 }
 
 #calendar {
-    max-width: 1512px;
-    margin: 50px auto;
-    padding: 0 10px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-
 footer {
     background: linear-gradient(90deg, #008080, #4CAF50);
     color: #fff;
@@ -94,6 +98,7 @@ footer {
     margin-top: 50px;
     border-top: 5px solid #3F51B5;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
 }
 
 footer p {
@@ -112,7 +117,6 @@ footer p {
     border-bottom: 2px solid #fff;
 }
 
-/* Media queries for mobile responsiveness */
 @media (max-width: 767px) {
     form {
         padding: 20px;
@@ -141,25 +145,22 @@ footer p {
     }
 
     .form-container {
-        flex-direction: column; /* Cambiar a "column" para apilar los elementos verticalmente en dispositivos móviles */
+        flex-direction: column;
         align-items: center;
     }
 
     .image-container {
-        order: -1; /* Para que la imagen aparezca en la parte superior del formulario en dispositivos móviles */
+        order: -1;
+    }
+}
+@media (min-width: 768px) {
+    form {
+        width: 70%; /* Esto hará que el formulario sea más ancho en pantallas más grandes */
+        min-height: 70%; /* Esto mantiene un aspecto cuadrado al asignar una altura mínima */
     }
 }
 
-#calendar {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Media queries for mobile responsiveness */
-@media (max-width: 767px) {
-    #calendar {
-        padding: 0;
-    }
-}
+
+
+
