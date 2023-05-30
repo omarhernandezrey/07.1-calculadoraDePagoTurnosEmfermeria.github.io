@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('#calendar').fullCalendar({
-        aspectRatio: 1.30,  // puedes ajustar este valor como necesites
+        aspectRatio: 1.55,
         locale: 'es',
         header: {
             left: 'prev,next today',
@@ -10,12 +10,11 @@ $(document).ready(function() {
         eventRender: function(event, element) {
             element.attr('title', event.title);
 
-            // Aquí se modifica el color del texto según sea Roxana o Arlendys.
             if (event.title.includes('Roxana')) {
-                element.css('color', 'red');  // Aquí cambias a tu color deseado para Roxana
+                element.css('color', 'red');
             }
             if (event.title.includes('Arlendys')) {
-                element.css('color', 'blue');   // Aquí cambias a tu color deseado para Arlendys
+                element.css('color', 'blue');
             }
         },
         dayRender: function(date, cell) {
@@ -42,6 +41,7 @@ function obtenerFestivosManualmente() {
         '2023-12': ['2023-12-08', '2023-12-25'],
     };
 }
+
 function esFestivo(date) {
     const anioMes = date.format('YYYY-MM');
     const festivos = obtenerFestivosManualmente()[anioMes] || [];
@@ -79,9 +79,9 @@ function calcularPago() {
 
     resultadosDiv.innerHTML = `Total a pagar turnos del mes: $${totalPagar.toLocaleString()} Pesos`;
 
-
     generarCalendario(totalDiasMes, turnosDia, turnosNoche, turnosDomingoDia, turnosDomingoNoche, turnosFestivosDia, turnosFestivosNoche);
 }
+
 function generarCalendario() {
     const calendar = $('#calendar');
     calendar.fullCalendar('removeEvents');
@@ -103,11 +103,11 @@ function generarCalendario() {
         };
 
         if (i % 2 === 0) { // Día impar
-            turnoDia.title = 'Turno Día - Arlendys';
-            turnoNoche.title = 'Turno Noche - Arlendys';
+            turnoDia.title = 'Día - Arlendys';
+            turnoNoche.title = 'Noche - Arlendys';
         } else { // Día Par
-            turnoDia.title = 'Turno Día - Roxana';
-            turnoNoche.title = 'Turno Noche - Roxana';
+            turnoDia.title = 'Día - Roxana';
+            turnoNoche.title = 'Noche - Roxana';
         }
 
         if (currentDay.day() === 0 || esFestivo(currentDay)) { // Es domingo o festivo
@@ -116,11 +116,11 @@ function generarCalendario() {
             
             // Cambiar el título del turno si es domingo o festivo
             if (esFestivo(currentDay)) {
-                turnoDia.title = turnoDia.title.replace('Turno Día', 'Turno Día Festivo');
-                turnoNoche.title = turnoNoche.title.replace('Turno Noche', 'Turno Noche Festivo');
+                turnoDia.title = turnoDia.title.replace('Día', 'Día Festivo');
+                turnoNoche.title = turnoNoche.title.replace('Noche', 'Noche Festivo');
             } else if (currentDay.day() === 0) {
-                turnoDia.title = turnoDia.title.replace('Turno Día', 'Turno Día Domingo');
-                turnoNoche.title = turnoNoche.title.replace('Turno Noche', 'Turno Noche Domingo');
+                turnoDia.title = turnoDia.title.replace('Día', 'Día Domingo');
+                turnoNoche.title = turnoNoche.title.replace('Noche', 'Noche Domingo');
             }
         } else { // No es domingo ni festivo
             turnoDia.color = 'orange';
