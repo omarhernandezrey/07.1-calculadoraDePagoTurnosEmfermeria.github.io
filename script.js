@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('#calendar').fullCalendar({
-        aspectRatio: 1.35,  // puedes ajustar este valor como necesites
+        aspectRatio: 1.30,  // puedes ajustar este valor como necesites
         locale: 'es',
         header: {
             left: 'prev,next today',

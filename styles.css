@@ -25,6 +25,7 @@ form {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     width: 100%;
+    margin-bottom: 30px; /* Añadido margen inferior para asegurar que se pueda desplazar hasta el final del formulario */
 }
 
 form label {
@@ -113,14 +114,20 @@ footer p {
     transition: border-color 0.3s ease;
 }
 
-.footer-link:hover {
-    border-bottom: 2px solid #fff;
-}
-
+/* Media queries for mobile responsiveness */
 @media (max-width: 767px) {
+    body {
+        font-size: 80%; /* reduce el tamaño de la fuente en un 20% */
+    }
+
+    h1 {
+        padding: 15px 0; /* reduce el padding del título */
+    }
+
     form {
         padding: 20px;
         margin: 20px;
+        width: 100%;
     }
 
     form label {
@@ -142,6 +149,7 @@ footer p {
 
     #resultados {
         margin: 20px;
+        max-width: 100%;
     }
 
     .form-container {
@@ -153,14 +161,15 @@ footer p {
         order: -1;
     }
 }
+
 @media (min-width: 768px) {
     form {
         width: 70%; /* Esto hará que el formulario sea más ancho en pantallas más grandes */
         min-height: 70%; /* Esto mantiene un aspecto cuadrado al asignar una altura mínima */
     }
+
+    #resultados {
+        max-width: 70%;
+    }
 }
-
-
-
-
 
