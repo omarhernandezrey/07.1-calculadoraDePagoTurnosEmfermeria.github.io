@@ -149,3 +149,17 @@ footer p {
         order: -1; /* Para que la imagen aparezca en la parte superior del formulario en dispositivos móviles */
     }
 }
+
+#calendar {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 767px) {
+    #calendar {
+        padding: 0;
+    }
+}
