@@ -8,6 +8,14 @@ $(document).ready(function() {
         },
         eventRender: function(event, element) {
             element.attr('title', event.title);
+
+            // Aquí se modifica el color del texto según sea Roxana o Arlendys.
+            if (event.title.includes('Roxana')) {
+                element.css('color', 'red');  // Aquí cambias a tu color deseado para Roxana
+            }
+            if (event.title.includes('Arlendys')) {
+                element.css('color', 'blue');   // Aquí cambias a tu color deseado para Arlendys
+            }
         },
         dayRender: function(date, cell) {
             if (date.day() === 0 || esFestivo(date)) {
@@ -69,6 +77,7 @@ function calcularPago() {
     const resultadosDiv = document.getElementById("resultados");
 
     resultadosDiv.innerHTML = `Total a pagar turnos del mes: $${totalPagar.toLocaleString()} Pesos`;
+
 
     generarCalendario(totalDiasMes, turnosDia, turnosNoche, turnosDomingoDia, turnosDomingoNoche, turnosFestivosDia, turnosFestivosNoche);
 }
