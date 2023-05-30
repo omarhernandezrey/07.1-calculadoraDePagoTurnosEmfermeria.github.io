@@ -78,10 +78,10 @@ button:hover {
     background-color: #ffffff;
     box-shadow: 0 2px 4px #4caf50;
     border-radius: 8px;
-    max-width: 800px; /* Cambiado para hacer los resultados más grandes */
+    max-width: 800px;
     margin: 30px auto;
     color: orangered;
-    text-align: center; /* Asegúrate de que los resultados estén centrados */
+    text-align: center;
 }
 
 #calendar {
@@ -90,6 +90,7 @@ button:hover {
     padding: 0;
     box-sizing: border-box;
 }
+
 footer {
     background: linear-gradient(90deg, #008080, #4CAF50);
     color: #fff;
@@ -114,6 +115,10 @@ footer p {
     transition: border-color 0.3s ease;
 }
 
+.footer-link:hover {
+    border-bottom: 2px solid #fff;
+}
+
 /* Media queries for mobile responsiveness */
 @media (max-width: 767px) {
     body {
@@ -128,6 +133,7 @@ footer p {
         padding: 20px;
         margin: 20px;
         width: 100%;
+        max-width: 100%;
     }
 
     form label {
@@ -160,16 +166,33 @@ footer p {
     .image-container {
         order: -1;
     }
+
+    footer {
+        padding: 10px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    .footer-link {
+        font-size: 12px;
+    }
 }
 
 @media (min-width: 768px) {
     form {
-        width: 70%; /* Esto hará que el formulario sea más ancho en pantallas más grandes */
-        min-height: 70%; /* Esto mantiene un aspecto cuadrado al asignar una altura mínima */
+        width: 60%; /* Reducir el ancho del formulario */
+        margin: 0 auto; /* Centrar el formulario */
     }
 
     #resultados {
-        max-width: 70%;
+        max-width: 60%; /* Reducir el ancho de los resultados */
+        margin: 0 auto; /* Centrar los resultados */
+    }
+
+    #calendar {
+        max-width: 60%; /* Reducir el ancho del calendario */
+        margin: 0 auto; /* Centrar el calendario */
     }
 }
-
