@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 100%;
 }
 
 h1 {
@@ -20,24 +21,26 @@ h1 {
 }
 
 form {
-    padding: 30px;
+    padding: 50px;
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    width: 100%;
-    margin-bottom: 30px; /* Añadido margen inferior para asegurar que se pueda desplazar hasta el final del formulario */
+    width: 60%;
+    margin-bottom: 30px;
+    border: 4px solid #008080;
+    margin: 20px auto; /* Añadido margen superior e inferior para separarlo del título */
 }
 
 form label {
-    display: inline-block;
-    width: 180px;
+    display: block;
+    width: 100%;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 form input {
-    width: 60px;
-    padding: 5px 10px;
+    width: 100%;
+    padding: 8px;
     margin-bottom: 10px;
     border-radius: 4px;
     border: 1px solid #ccc;
@@ -48,7 +51,7 @@ form input {
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    margin-bottom: 50px;
+    margin-bottom: -39px;
 }
 
 .image-container {
@@ -72,11 +75,11 @@ button:hover {
 }
 
 #resultados {
-    padding: 28px;
+    padding: 15px;
     font-size: 18px;
     font-weight: bold;
     background-color: #ffffff;
-    box-shadow: 0 2px 4px #4caf50;
+    box-shadow: 0 2px 4px #ffffff;
     border-radius: 8px;
     max-width: 800px;
     margin: 30px auto;
@@ -85,10 +88,11 @@ button:hover {
 }
 
 #calendar {
-    width: 100%;
+    max-width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 10px;
 }
 
 footer {
@@ -108,6 +112,7 @@ footer p {
     padding: 0;
 }
 
+/* Estilos para los enlaces del footer */
 .footer-link {
     color: #fff;
     text-decoration: none;
@@ -117,82 +122,4 @@ footer p {
 
 .footer-link:hover {
     border-bottom: 2px solid #fff;
-}
-
-/* Media queries for mobile responsiveness */
-@media (max-width: 767px) {
-    body {
-        font-size: 80%; /* reduce el tamaño de la fuente en un 20% */
-    }
-
-    h1 {
-        padding: 15px 0; /* reduce el padding del título */
-    }
-
-    form {
-        padding: 20px;
-        margin: 20px;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    form label {
-        display: block;
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
-    form input {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    button {
-        display: block;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    #resultados {
-        margin: 20px;
-        max-width: 100%;
-    }
-
-    .form-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .image-container {
-        order: -1;
-    }
-
-    footer {
-        padding: 10px;
-    }
-
-    footer p {
-        font-size: 12px;
-    }
-
-    .footer-link {
-        font-size: 12px;
-    }
-}
-
-@media (min-width: 768px) {
-    form {
-        width: 60%; /* Reducir el ancho del formulario */
-        margin: 0 auto; /* Centrar el formulario */
-    }
-
-    #resultados {
-        max-width: 60%; /* Reducir el ancho de los resultados */
-        margin: 0 auto; /* Centrar los resultados */
-    }
-
-    #calendar {
-        max-width: 60%; /* Reducir el ancho del calendario */
-        margin: 0 auto; /* Centrar el calendario */
-    }
 }
