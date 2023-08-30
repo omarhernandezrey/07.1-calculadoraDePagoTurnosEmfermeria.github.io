@@ -101,14 +101,16 @@ function generarCalendario() {
             start: currentDay.format('YYYY-MM-DD'),
             color: ''
         };
+// Actualizar turnos en el calendario enfermeras
 
-        if (i % 2 === 0) { // Día impar
-            turnoDia.title = 'Día - Roxana';
-            turnoNoche.title = 'Noche - Roxana';
-        } else { // Día Par
-             turnoDia.title = 'Día - Arlendys';
-            turnoNoche.title = 'Noche - Arlendys';
-        }
+if (i % 2 === 0) { // Día impar
+    turnoDia.title = 'Día - Arlendys';
+    turnoNoche.title = 'Noche - Arlendys';
+} else { // Día Par
+    turnoDia.title = 'Día - Roxana';
+    turnoNoche.title = 'Noche - Roxana';
+}
+
 
         if (currentDay.day() === 0 || esFestivo(currentDay)) { // Es domingo o festivo
             turnoDia.color = 'gray';
